@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 7777;
+const port = 3000;
 const noblox = require("noblox.js");
 const app = express();
 const groupID = 2931379;
@@ -12,7 +12,7 @@ async function run() {
 run();
 app.get("/promote", (req, res) => {
 	var headerKey = req.headers.key;
-	var userPromote = req.headers.userId;
+	var userPromote = req.headers.userid;
 	if (headerKey != key) {
 		res.send(403); //Forbidden, you need a key for this
 		return;
